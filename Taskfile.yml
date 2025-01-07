@@ -1,0 +1,45 @@
+version: '3'
+
+interval: 500ms
+silent: true
+
+tasks:
+  install:
+    cmds:
+      - npm install
+      - go mod download
+  clean:
+    cmds:
+      - echo "Cleaning build dir..."
+      - rm -rf build/*
+
+  build:css:
+    cmds:
+      - echo "Generating css..."
+      - npm run build
+  
+  build:
+    deps: ['clean']
+    cmds:
+      - task: build:css
+      - echo "Building project..."
+      - go build -o build/ .
+
+  dev:
+    dotenv: ['.default.env', '.dev.env.']
+    watch: true
+    sources: 
+      - './main.go'
+      - '**/*.go'
+      - '**/*.html'
+    cmds:
+      - task: build:css
+      - echo "Start dev server"
+      - go run .
+      
+  test:
+    dotenv: ['.default.env', '.test.env.']
+    cmds:
+      - task: build:css
+      - go test ./tests/...
+
