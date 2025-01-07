@@ -13,4 +13,4 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: 'build'
-      run: docker build . --target build
+      run: docker build-go . --target build
