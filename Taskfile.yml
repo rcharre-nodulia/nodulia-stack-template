@@ -1,6 +1,6 @@
 version: '3'
 
-interval: 500ms
+interval: 2s
 silent: true
 
 tasks:
