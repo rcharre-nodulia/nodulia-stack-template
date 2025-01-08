@@ -16,4 +16,4 @@ RUN go mod download && \
 FROM scratch
 COPY --from=build-go app/build/bin /app/build/bin
 
-CMD ["/app/app"]
+CMD ["/app/bin"]

@@ -23,9 +23,9 @@ type PageData struct {
 }
 
 func main() {
-	addr, found := os.LookupEnv("FE_ADDRESS")
+	addr, found := os.LookupEnv("SERVER_ADDRESS")
 	if !found {
-		slog.Info("Env var FE_ADDRESS not set, use default :8080")
+		slog.Info("Env var SERVER_ADDRESS not set, use default :8080")
 		addr = ":8080"
 	}
 

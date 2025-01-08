@@ -5,13 +5,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/static/css/style.css" rel="stylesheet">
+  <script src="https://unpkg.com/htmx.org@2.0.4"
+    integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
+    crossorigin="anonymous"></script>
 </head>
 
-<body>
-  {{template "navbar"}}
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<style>
+  h1,
+  h2,
+  h3 {
+    margin: 10px 0;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: lightseagreen;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  li {
+    margin: 8px 0;
+  }
+</style>
+
+<body class="font-sans p-2">
+  <div class="md:container mx-auto">
+    <h1 class="text-3xl font-bold">Go To Hell stack</h1>
+    <p class="text-sm">The "Go To Hell" stack is a modern, performance-driven development stack designed for building
+      dynamic, scalable,
+      and visually appealing web applications. Named for its bold approach to simplicity and speed, this stack leverages
+      <strong>Golang</strong>, <strong>Tailwind CSS</strong>, and <strong>HTMX</strong> to empower developers to create
+      robust full-stack solutions with
+      minimal
+      overhead.
+    </p>
+
+    <h2 class="text-2xl">Components</h2>
+    <ul>
+      <li><strong><a target="_blank" href="https://go.dev/">Golang</a></strong> offers unparalleled performance and
+        simplicity for
+        building highly
+        concurrent,
+        scalable web servers and
+        APIs. Its strong typing and straightforward syntax ensure maintainability and reliability in production
+        environments.</li>
+      <li><strong><a target="_blank" href="https://tailwindcss.com/">Tailwind CSS</a></strong> provides utility-first,
+        responsive design
+        capabilities, allowing
+        developers to
+        craft elegant and
+        consistent user interfaces with ease. Its customization and modularity reduce CSS bloat, improving load times
+        and design flexibility.</li>
+      <li><strong><a target="_blank" href="https://htmx.org/">HTMX</a></strong> brings simplicity to client-side
+        interactions by enabling seamless
+        HTML-based AJAX
+        requests, WebSocket
+        connections, and SSE. This eliminates the need for complex JavaScript frameworks, resulting in lightweight,
+        interactive user experiences.</li>
+    </ul>
+
+    <h2 class="text-2xl">Key features</h2>
+    <ul>
+      <li>
+        <strong>Simplicity and Elegance:</strong>
+        Focuses on reducing complexity, enabling developers to build robust applications quickly and efficiently.
+      </li>
+      <li>
+        <strong>Developer Mastery:</strong>
+        Every part of the stack is open and transparent—no black boxes, no hidden abstractions. The developer is always
+        in
+        control of the code.
+      </li>
+      <li>
+        <strong>Minimal Overhead:</strong>
+        Built to avoid unnecessary complexity, the stack minimizes dependencies and bloat, keeping projects lean and
+        efficient.
+      </li>
+      <li>
+        <strong>Minimal Client-Side JavaScript:</strong>
+        HTMX removes the need for heavy JavaScript frameworks, simplifying development while still delivering
+        interactive
+        user experiences.
+      </li>
+    </ul>
+  </div>
 </body>
 
 </html>
