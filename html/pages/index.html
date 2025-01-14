@@ -1,99 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/static/css/style.css" rel="stylesheet">
-  <script src="https://unpkg.com/htmx.org@2.0.4"
-    integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
-    crossorigin="anonymous"></script>
+  {{template "head" .}}
 </head>
 
-<style>
-  h1,
-  h2,
-  h3 {
-    margin: 10px 0;
-  }
+<body class="bg-gray-100 font-sans">
+  <header class="bg-blue-600 text-white py-6">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold">SSSSRR</h1>
+      <p class="text-lg mt-2">Simple Stack for Server-Side Rendering by Raphael</p>
+    </div>
+  </header>
 
-  a {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    color: lightseagreen;
+  <main class="container mx-auto my-10 px-4">
+    <section class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800">Why Choose SSSSRR?</h2>
+      <p class="text-gray-600 mt-4">Experience the perfect blend of speed, simplicity, and style with our stack
+        featuring <a href="https://golang.org" class="text-blue-600 underline">Golang</a>, <a
+          href="https://tailwindcss.com" class="text-blue-600 underline">TailwindCSS</a>, and <a href="https://htmx.org"
+          class="text-blue-600 underline">HTMX</a>.</p>
+    </section>
 
-    &:hover {
-      text-decoration: none;
-    }
-  }
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-800">
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <h3 class="text-2xl font-semibold mb-4">Golang</h3>
+        <p>Lightning-fast server-side performance. Build robust backends that handle anything you throw at them.</p>
+      </div>
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <h3 class="text-2xl font-semibold mb-4">TailwindCSS</h3>
+        <p>Design sleek, modern, and responsive UIs effortlessly with utility-first CSS classes.</p>
+      </div>
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <h3 class="text-2xl font-semibold mb-4">HTMX</h3>
+        <p>Keep it simple with minimal JavaScript. Bring dynamic interactivity to your HTML with ease.</p>
+      </div>
+    </section>
 
-  li {
-    margin: 8px 0;
-  }
-</style>
+    <section class="text-center mt-12">
+      <h2 class="text-3xl font-bold text-gray-800">A Stack With Personality</h2>
+      <p class="text-gray-600 mt-4">SSSSRR isn’t just another stack—it’s your new best friend in web development. Like a
+        good cup of coffee, it’s strong, energizing, and occasionally inspires existential thoughts. With <a
+          href="https://golang.org" class="text-blue-600 underline">Golang’s</a> speed, <a
+          href="https://tailwindcss.com" class="text-blue-600 underline">Tailwind’s</a> elegance, and <a
+          href="https://htmx.org" class="text-blue-600 underline">HTMX’s</a> “less is more” philosophy, SSSSRR makes
+        building web apps feel like magic (if magic involved debugging and great documentation).</p>
+    </section>
+  </main>
 
-<body class="font-sans p-2">
-  <div class="md:container mx-auto">
-    <h1 class="text-3xl font-bold">Go To Hell stack</h1>
-
-    <p class="text-sm">The "Go To Hell" stack is a modern, performance-driven development stack designed for building
-      dynamic, scalable,
-      and visually appealing web applications. Named for its bold approach to simplicity and speed, this stack leverages
-      <strong>Golang</strong>, <strong>Tailwind CSS</strong>, and <strong>HTMX</strong> to empower developers to create
-      robust full-stack solutions with
-      minimal
-      overhead.
-    </p>
-
-    <h2 class="text-2xl">Components</h2>
-    <ul>
-      <li><strong><a target="_blank" href="https://go.dev/">Golang</a></strong> offers unparalleled performance and
-        simplicity for
-        building highly
-        concurrent,
-        scalable web servers and
-        APIs. Its strong typing and straightforward syntax ensure maintainability and reliability in production
-        environments.</li>
-      <li><strong><a target="_blank" href="https://tailwindcss.com/">Tailwind CSS</a></strong> provides utility-first,
-        responsive design
-        capabilities, allowing
-        developers to
-        craft elegant and
-        consistent user interfaces with ease. Its customization and modularity reduce CSS bloat, improving load times
-        and design flexibility.</li>
-      <li><strong><a target="_blank" href="https://htmx.org/">HTMX</a></strong> brings simplicity to client-side
-        interactions by enabling seamless
-        HTML-based AJAX
-        requests, WebSocket
-        connections, and SSE. This eliminates the need for complex JavaScript frameworks, resulting in lightweight,
-        interactive user experiences.</li>
-    </ul>
-
-    <h2 class="text-2xl">Key features</h2>
-    <ul>
-      <li>
-        <strong>Simplicity and Elegance:</strong>
-        Focuses on reducing complexity, enabling developers to build robust applications quickly and efficiently.
-      </li>
-      <li>
-        <strong>Developer Mastery:</strong>
-        Every part of the stack is open and transparent—no black boxes, no hidden abstractions. The developer is always
-        in
-        control of the code.
-      </li>
-      <li>
-        <strong>Minimal Overhead:</strong>
-        Built to avoid unnecessary complexity, the stack minimizes dependencies and bloat, keeping projects lean and
-        efficient.
-      </li>
-      <li>
-        <strong>Minimal Client-Side JavaScript:</strong>
-        HTMX removes the need for heavy JavaScript frameworks, simplifying development while still delivering
-        interactive
-        user experiences.
-      </li>
-    </ul>
-  </div>
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Raphael - Built with SSSSRR</p>
+      <p class="mt-2">Follow us on <a href="#" class="text-blue-400 underline">GitHub</a></p>
+    </div>
+  </footer>
 </body>
 
 </html>

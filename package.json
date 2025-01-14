@@ -4,7 +4,7 @@
   "description": "Nodulia base template for web app",
   "main": "tailwind.config.js",
   "scripts": {
-    "build": "npx tailwindcss -o static/css/style.css"
+    "build:css": "npx tailwindcss -o build/static/css/style.css"
   },
   "author": "",
   "license": "ISC",
