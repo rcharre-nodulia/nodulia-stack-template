@@ -2,8 +2,10 @@ FROM node:23-alpine AS build-css
 WORKDIR /app
 COPY . .
 
-RUN npm install
-RUN npm run build 
+RUN npm install && \
+  cp -r static build/static && \
+  npm run build:css
+
 FROM golang:1.23.4-alpine AS build-go
 
 WORKDIR /app
