@@ -1,4 +1,6 @@
 github.com/go-chi/chi/v5 v5.1.0 h1:acVI1TYaD+hhedDJ3r54HyA6sExp3HfXq7QWEEY/xMw=
 github.com/go-chi/chi/v5 v5.1.0/go.mod h1:DslCQbL2OYiznFReuXYUmQ2hGd1aDpCnlMNITLSKoi8=
+github.com/gorilla/websocket v1.5.3 h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg=
+github.com/gorilla/websocket v1.5.3/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
 github.com/rcharre/psapi v0.0.2 h1:bulh7TCuYbRg79xmX8KeEVlwwNwoOkYLXgjUnViBMsY=
 github.com/rcharre/psapi v0.0.2/go.mod h1:xp8u03Rm7QFp/m6VLd5isE3yNi9YmEouiTbnEkILfXg=

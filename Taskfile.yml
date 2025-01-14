@@ -1,6 +1,6 @@
 version: '3'
 
-interval: 500ms
+interval: 2s
 silent: true
 
 tasks:
@@ -12,30 +12,40 @@ tasks:
     cmds:
       - echo "Cleaning build dir..."
       - rm -rf build/*
+      - rm -rf .task/
+
+  build:static:
+    sources:
+      - 'static/**/*'
+    cmds:
+      - echo "Copying static dir"
+      - cp -r static build/
 
   build:css:
+    sources: 
+      - 'html/**/*.html'
     cmds:
       - echo "Generating css..."
-      - npm run build
-  
+      - npm run build:css
+
   build:
-    deps: ['clean']
     cmds:
+      - task: build:static
       - task: build:css
       - echo "Building project..."
       - go build -o build/ .
 
   dev:
-    dotenv: ['.default.env', '.dev.env.']
+    dotenv: ['.default.env', '.dev.env']
     watch: true
     sources: 
       - './main.go'
       - '**/*.go'
-      - '**/*.html'
+      - 'html/**/*.html'
     cmds:
-      - task: build:css
+      - task: build
       - echo "Start dev server"
-      - go run .
+      - ./build/nodulia-stack-template
       
   test:
     dotenv: ['.default.env', '.test.env.']
