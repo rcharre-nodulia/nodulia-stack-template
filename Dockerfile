@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 
 RUN npm install && \
-  cp -r static build/static && \
+  cp -r static build && \
   npm run build:css
 
 FROM golang:1.23.4-alpine AS build-go
